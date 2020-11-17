@@ -203,7 +203,10 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+<<<<<<< HEAD
   font-awesome-sass (~> 5.15.1)
+=======
+>>>>>>> 8d3e58f3168cd15825bfa0439136cbf73dc8152f
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 4.1)
