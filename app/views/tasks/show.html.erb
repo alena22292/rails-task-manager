@@ -1,7 +1,22 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 
-<p>This task is not completed yet</p>
+<div class="complete-task">
+  <%= form_for(@task) do |f| %>
+  <%= f.check_box :completed %>
+  <% end %>
+  <% if @task.completed %>
+  <p>This task is completed!</p>
+  <% else %>
+  <p>This task is not completed yet</p>
+  <% end %>
+</div>
 
-<p><%= link_to 'Back to list', tasks_path %></p>
-<p><%= link_to 'Edit task', edit_task_path %></p>
+
+
+<p><%= link_to tasks_path do %>
+  <i class="fas fa-arrow-circle-left"></i> Back to list
+  <% end %></p>
+  <p><%= link_to edit_task_path do %>
+    <i class="fas fa-pencil-alt"></i> Edit task
+    <% end %></p>
